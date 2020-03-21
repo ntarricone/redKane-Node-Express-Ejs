@@ -1,0 +1,22 @@
+.bodyBackground{
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.imageddbb{
+  width: 14vw;
+}
+
+.inblock{
+  display: flex;
+  margin-bottom: -48px;
+}
+
+.botonColor{
+  background-color: #333333 !important;
+  color: white !important;
+}
+
+.botonColor:hover{
+  background-color: #ff3333 !important;
+  color: white !important;
+}

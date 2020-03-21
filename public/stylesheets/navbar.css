@@ -1,0 +1,30 @@
+.navbarDescription{
+    height: 8vh;
+}
+
+.logo{
+    width: 14vw;
+    height: 7vh;
+  }
+
+  .grey{
+    background-color: rgba(176, 172, 172, 0.86);
+  }
+
+  .lupa{
+    width: 2vw;
+}
+
+.icon{
+    font-size: 2rem;
+    color: black;
+    padding-right: 2vw;
+}
+
+.icon:hover{
+    color: #ff3333;
+}
+
+.borderFooter{
+  border-top: 2px solid;
+}

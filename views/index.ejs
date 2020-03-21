@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Article</title>
+  <!-- link a los .js como en notepad -->
+  <script type="text/javascript" src="js/manageText.js" charset="UTF-8"></script>
+  <script type="text/javascript" src="js/utilities.js" charset="UTF-8"></script>
+  <link rel='stylesheet' href='/stylesheets/index.css' />
+  <link rel='stylesheet' href='/stylesheets/navbar.css' />
+  <link rel='stylesheet' href='/stylesheets/footer.css' />
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body class="bodyBackground">
+  
+  <!--NAVBAR-->
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark grey navbarDescription">
+      <a href="/"><img class="logo" src="../images/logoKane2.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto"></ul>
+        <a href="/user"><i class="fas fa-newspaper icon"></i></a>
+        <a href="/list"><i class="far fa-edit icon"></i></a>
+
+        
+        <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle spacing" href="#" id="navbarDropdown" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img class="lupa" src="../images/TerminatorProfile.png">
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="/user">Usuario</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/user">Mi cuenta</a>
+            </div>
+        </div>
+      </div>
+    </nav>
+
+  <div class="container-fluid ">
+    <div class="row">
+      <div class="col-8 m-5">
+        <form action="/list" method="POST" enctype="multipart/form-data">
+          <h1>Escriba su artículo</h1>
+          <div class="inblock">
+          <div class="form-group">
+            <select name="category" class="form-control">
+              <option selected disabled>Categoría</option>
+              <option name="category" value="Policiales">Policiales</option>
+              <option name="category" value="Entretenimiento">Entretenimiento</option>
+              <option name="category" value="Deportes">Deportes</option>
+              <option name="category" value="Actualidad">Actualidad</option>
+              <option name="category" value="Internacionales">Internacionales</option>
+              <option name="category" value="Nacionales">Nacionales</option>
+              <option name="category" value="Arte">Arte</option>
+              <option name="category" value="Humor">Humor</option>
+              <option name="category" value="Otros">Otros</option>
+            </select>
+          </div>
+          <div class="form-group ml-2">
+              <input type="text" size="2" class=" form-control shadow p-3 mb-5 bg-white rounded" required placeholder="Precio en €"
+                name="price">
+            </div>
+            </div>
+
+          <div class="form-group ">
+            <input type="text" class="form-control shadow p-3 mb-5 bg-white rounded" placeholder="Título" name="title">
+          </div>
+          <div class="form-group">
+            <textarea rows="15" type="text" class="form-control shadow p-3 mb-5 bg-white rounded"
+              id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Text" name="text">
+            </textarea>
+          </div>
+
+          <!--I don´t ask for a date because it´s taking the current one directly form NodeJS-->
+          <h2>Suba su archivo multimedia</h2>
+          <div class="form-group">
+            <select name="type" class="form-control">
+              <option selected disabled>Tipo de archivo</option>
+              <option value="Foto" name="type">Foto</option>
+              <option value="Video" name="type">Video</option>
+              <option value="Audio" name="type">Audio</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <input type="file" class="form-control shadow p-3 mb-5 bg-white rounded" name="file">
+        </div>
+
+          <div class="form-group">
+            <input type="text" class="form-control shadow p-3 mb-5 bg-white rounded"
+              placeholder="Breve descripción del archivo" name="description">
+          </div>
+          <button type="submit" class="btn botonColor">Guarde su Artículo</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+ <!-- FOOTER -->
+ <footer class="page-footer lightGrey">
+    
+
+  <div class="footer-copyright text-center py-3">© 2019 Copyright: RedKane
+  </div>
+
+
+</footer>
+
+
+</script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

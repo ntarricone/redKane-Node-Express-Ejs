@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Articles</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel='stylesheet' href='/stylesheets/fullArticle.css' />
+  <link rel='stylesheet' href='/stylesheets/navbar.css' />
+  <link rel='stylesheet' href='/stylesheets/footer.css' />
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body class="bodyBackground ">
+
+  <!--NAVBAR-->
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark grey navbarDescription">
+      <a href="/"><img class="logo" src="../images/logoKane2.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto"></ul>
+        <a href="/user"><i class="fas fa-newspaper icon"></i></a>
+        <a href="/list"><i class="far fa-edit icon"></i></a>
+        
+        <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle spacing" href="#" id="navbarDropdown" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img class="lupa" src="../images/TerminatorProfile.png">
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="/user">Usuario</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/user">Mi cuenta</a>
+            </div>
+        </div>
+      </div>
+    </nav>
+
+
+  <div class="row">
+    <div class="col-12">
+
+        <div class="card mb-5 bg-white fullArticle" style="width: 18rem;">
+            <div class="card-header">
+                <h6 class="card-text"><%= results.category %></h6>
+                <h6 class="card-text"><%= results.price %>€</h6>
+              </div>
+            <h1 class="card-title text-center"><%= results.title %></h1>
+            <img class="image rounded mx-auto d-block" src="/uploads/<%= result.file %>">
+            <p class="card-text text-center"><%= result.description %></p>
+            <div class="card-body">
+
+                <p class="text-justify card-text"><%= results.text %></p>
+                <span>Fecha de Edicion</span>
+                <p class="card-text" id="edit_date"><%= results.edit_date %></p>
+                <a class="btn botonColor" href="/update/<%= results.article_id%>"><i class="fas fa-edit"></i></i></a>
+                <a class="btn botonColor" href="/delete/<%= results.article_id%>"><i class="fas fa-trash-alt"></i></i></a>
+                
+              </div>
+          </div>
+
+
+    </div>
+
+  </div>
+
+
+ <!-- FOOTER -->
+ <footer class="page-footer lightGrey">
+    
+
+  <div class="footer-copyright text-center py-3">© 2019 Copyright: RedKane
+  </div>
+
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

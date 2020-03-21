@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Articles</title>
+  <!-- link a los .js como en notepad -->
+
+  <script type="text/javascript" src="js/utilities.js" charset="UTF-8"></script>
+  <link rel='stylesheet' href='/stylesheets/navbar.css' />
+  <link rel='stylesheet' href='/stylesheets/user.css' />
+  <link rel='stylesheet' href='/stylesheets/card.css' />
+  <link rel='stylesheet' href='/stylesheets/footer.css' />
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body class="bodyBackground">
+
+
+  <!--NAVBAR-->
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark grey navbarDescription">
+    <a href="/"><img class="logo" src="../images/logoKane2.png"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto"></ul>
+      <a href="/user"><i class="fas fa-newspaper icon"></i></a>
+      <a href="/list"><i class="far fa-edit icon"></i></a>
+
+
+      <div class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle spacing" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          <img class="lupa" src="../images/TerminatorProfile.png">
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="/user">Usuario</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/user">Mi cuenta</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!--HEADER-->
+
+  <div class="container-fluid header">
+    <div class="row">
+      <div class="col-3">
+        <img class="bigAvatar" src="../images/TerminatorProfile.png">
+      </div>
+      <div class="col-9 profileDescription text-white">
+        <h1>Nahuel Tarricone</h1>
+        <h2>Productor - Camarógrafo - Realizador Audiovisual</h2>
+      </div>
+    </div>
+  </div>
+
+  <!--Options Bar-->
+  <div class="container-fluid">
+    <div class="row ">
+
+      <div class="col-1 fixed">
+          <button onclick="openPanel()" type="button" id="boton" class="btn btn-outline-secondary boton"><i class="fas fa-angle-right"></i></button>
+
+      <div id="myDIV"class="hide">
+
+        <a class="sidePanelContent" href="#">
+          <h4>Perfil</h4>
+        </a>
+
+        <div class="dropright mt-4 ">
+          <a class="dropdown-toggle dropdownMedia sidePanelContent" href="#" id="dropdownMenuLink"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Multimedia
+          </a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="/user">Mis Artículos</a>
+            <a class="dropdown-item" href="#">Mis Fotos</a>
+            <a class="dropdown-item" href="#">Mis Videos</a>
+          </div>
+
+        </div>
+        <a class="sidePanelContent" href="#">
+          <h4 class="mt-4 ">Configuración</h4>
+        </a>
+      </div>
+      </div>
+      <div class="col-1 dissapear"></div>
+      <div class="col-10">
+        <!--ARTICLES-->
+        <div class="container-fluid pt-5">
+          <div class="row">
+            <div class="col-6">
+              <h1 class="ml-5">Mis Artículos</h1>
+            </div>
+            <div class="col-6 pt-3">
+              <div class="btn-group ">
+                <!-- <button class="btn btn-sm btn-default btn-sorteable">Fecha <i class="fa fa-sort"></i></button> -->
+                <button class="btn btn-sm btn-default btn-sorteable">Costo <i class="fa fa-sort"></i></button>
+                <button class="btn btn-sm btn-default btn-sorteable">Tipo de Contenido <i
+                    class="fa fa-sort"></i></button>
+                <button class="btn btn-sm btn-default btn-sorteable">Vistas <i class="fa fa-sort"></i></button>
+                <button class="btn btn-sm btn-default btn-sorteable">Credibilidad <i class="fa fa-sort"></i></button>
+
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <% results.forEach(function(article){  %>
+            <div class="col-12 col-md-3  mt-2 mb-5 ml-5">
+
+              <div class="card" style="width: 18rem;">
+                <div class="card-header">
+                  <h6 class="card-text"><%= article.category %></h6>
+                  <h6 id="<%= article.price %>" class="card-text"><%= article.price %>€</h6>
+                </div>
+                <img class="imageddbb" src="/uploads/<%= article.file %>">
+                <div class="card-body">
+                  <h5 class="card-title"><%= article.title %></h5>
+                  <p name="texto_articulo<%= article.article_id%>" id="texto_articulo<%= article.article_id%>" value="<%= article.text %>"
+                    class="card-text"><%= article.text %></p>
+                  <a class="btn botonColor" href="/fullArticle/<%= article.article_id%>">Ver Completo</a>
+                  <a class="btn botonColor" href="/update/<%= article.article_id%>"><i class="fas fa-edit"></i></i></a>
+                  <a class="btn botonColor" href="/delete/<%= article.article_id %>"><i
+                      class="fas fa-trash-alt"></i></a>
+                  <!-- <p name="date_article<%= article.date%>" id="date_article<%= article.date%>" class="card-text text-right"><%= article.date %></p> -->
+                  <!--INTENTAR MOSTRAR MENOS FECHA-->
+                  <!-- <p class="card-text"><%= article.type %></p>  NO NECESITO VER EL TIPO DE ARTICULO POR AHORA-->
+                </div>
+              </div>
+
+
+            </div>
+            <%  }) %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="page-footer lightGrey">
+    
+    <div class="text-center py-3">© 2019 Copyright: RedKane
+    </div>
+
+
+  </footer>
+
+  <script>
+// var str = text;
+
+// console.log(str.substr(0, 100));
+// expected output: "oz"
+
+    let text = null;
+    let textcortado = null;
+    let date = null;
+    let convertedDate = null;
+  <% results.forEach(function (article) {  %>;
+
+      text = document.getElementById("texto_articulo<%= article.article_id%>").innerHTML;
+      var str = text;
+
+
+      textocortado = countLetters(text);
+      console.log(textocortado)
+      document.getElementById("texto_articulo<%= article.article_id%>").innerHTML = textocortado;
+
+    
+  <%  }); %>
+
+  <% results.forEach(function (article) {  %>;
+
+        date = document.getElementById("date_article<%= article.date%>").innerHTML;
+        convertedDate = convertDate(date);
+        document.getElementById("date_article<%= article.date%>").innerHTML = convertedDate;
+
+  <%  }); %>
+
+
+  function openPanel (){
+  var x = document.getElementById("myDIV");
+  if (x.className === "hide") {
+    x.className = "sidePanel";
+  } else {
+    x.className = "hide";
+  }
+
+  }
+
+
+  function countit(text){
+ 
+ text.length*(1/100) // aquí está el precio de c/palabra//
+}
+console.log(countit)
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

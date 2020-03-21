@@ -1,0 +1,35 @@
+.imageddbb{
+    width: 100%;
+    border-radius: 0% !important;
+    height: 22vh;
+  }
+.card-header{
+    height: 6vh;
+    display: flex;
+    justify-content: space-between;
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(204, 202, 202, 0.76) !important;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+.botonColor{
+    background-color: #333333 !important;
+    color: white !important;
+}
+
+.botonColor:hover{
+    background-color: #ff3333 !important;
+    color: white !important;
+}
+
+.card{
+    height: 60vh;
+    width: 20vw;
+    box-shadow: 7px 6px 9px 0px;
+}
+
+.card:hover{
+    transform: scale(1.009);
+    box-shadow: 7px 6px 9px 2px;
+}

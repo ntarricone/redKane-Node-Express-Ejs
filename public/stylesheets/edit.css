@@ -1,0 +1,15 @@
+.bodyBackground{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+
+.inblock{
+    display: flex;
+    margin-bottom: -48px;
+}
+
+.imageddbb2{
+    width: 100%;
+    border-radius: 0% !important;
+    height: 50vh;
+  }

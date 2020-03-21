@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- link a los .js como en notepad -->
+  <!-- <script type="text/javascript" src="js/utilities.js" charset="UTF-8"></script> -->
+
+  <link rel='stylesheet' href='/stylesheets/navbar.css' />
+  <link rel='stylesheet' href='/stylesheets/edit.css' />
+  <link rel='stylesheet' href='/stylesheets/card.css' />
+  <link rel='stylesheet' href='/stylesheets/footer.css' />
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+
+<body class="bodyBackground">
+
+
+  <!--NAVBAR-->
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark grey navbarDescription">
+    <a href="/"><img class="logo" src="../images/logoKane2.png"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto"></ul>
+      <a href="/user"><i class="fas fa-newspaper icon"></i></a>
+      <a href="/list"><i class="far fa-edit icon"></i></a>
+
+      <div class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle spacing" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          <img class="lupa" src="../images/TerminatorProfile.png">
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="/user">Usuario</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/user">Mi cuenta</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-7">
+        <div class="col-12 formulario p-5">
+          <h1>Actualice su Artículo</h1>
+          <form action="/update/<%= results.article_id %>" method="post" enctype="multipart/form-data">
+            <div class="inblock">
+              <div class="form-group">
+                <span>Categoría</span>
+                <select name="category" value="<%=results.category %>" class="form-control">
+                  <option selected><%=results.category %></option>
+                  <option value="Policiales">Policiales</option>
+                  <option value="Entretenimiento">Entretenimiento</option>
+                  <option value="Deportes">Deportes</option>
+                  <option value="Actualidad">Actualidad</option>
+                  <option value="Internacionales">Internacionales</option>
+                  <option value="Nacionales">Nacionales</option>
+                  <option value="Arte">Arte</option>
+                  <option value="Humor">Humor</option>
+                  <option value="Otros">Otros</option>
+                </select>
+              </div>
+
+              <div class="form-group ml-2">
+                <span>Precio</span>
+                <input type="text" size="2" class="form-control shadow p-3 mb-5 bg-white rounded" name="price"
+                  placeholder="Edite su precio en €" value="<%=results.price %>">
+              </div>
+            </div>
+            <img class="imageddbb2" src="/uploads/<%= result.file %>">
+            <div class="form-group">
+              <input type="file" required value="/uploads/<%= result.file %>"
+                class="form-control shadow p-3 mb-5 bg-white rounded" name="file">
+            </div>
+            <div class="form-group">
+              <span>Edite la descripcion del archivo</span>
+              <input type="text" class="form-control shadow p-3 mb-5 bg-white rounded" name="description"
+                placeholder="Edite la descripción" value="<%=result.description %>">
+            </div>
+            <div class="form-group">
+              <span>Tipo de Archivo</span>
+              <select name="type" class="form-control" value="<%=result.type %>">
+                <option selected><%=result.type %></option>
+                <option value="Foto" name="type">Foto</option>
+                <option value="Video" name="type">Video</option>
+                <option value="Audio" name="type">Audio</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <span>Título</span>
+              <input type="text" class="form-control shadow p-3 mb-5 bg-white rounded" name="title" placeholder="Titulo"
+                value="<%=results.title %>">
+            </div>
+            <span>Texto</span>
+            <textarea rows="15" type="text" class="form-control shadow p-3 mb-5 bg-white rounded" id="exampleInputEmail1"
+              aria-describedby="emailHelp" value="<%=results.text %>" placeholder="Text" name="text">
+            <%=results.text %>
+            </textarea>
+
+            <button type="submit" class="btn botonColor updateButton">Guardar Cambios</button>
+          </form>
+        </div>
+      </div>
+      <div class="col-5 mt-5">
+
+        <div class="card mb-5 bg-white fullArticle" style="width: 18rem;">
+          <div class="card-header">
+            <h6 class="card-text"><%= results.category %></h6>
+            <h6 class="card-text"><%= results.price %>€</h6>
+          </div>
+          <img class="imageddbb mx-auto d-block" src="/uploads/<%= result.file %>">
+          <div class="card-body">
+            <h5 class="card-title"><%= results.title %></h5>
+
+            <p name="texto_articulo<%= results.article_id%>" id="texto_articulo<%= results.article_id%>"
+              class="card-text"><%= results.text %></p>
+
+            <!-- <p class="card-text"><%= results.date %></p> -->
+            <a class="btn botonColor" href="/fullArticle/<%= results.article_id%>">Ver Completo</a>
+
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+ <!-- FOOTER -->
+ <footer class="page-footer lightGrey">
+    
+
+  <div class="footer-copyright text-center py-3">© 2019 Copyright: RedKane
+  </div>
+
+
+</footer>
+  <script>
+    console.log("entro1")
+    function countLetters(text) {
+      let textoCortado = text.substring(0, 100);
+      console.log("entro")
+      console.log(textoCortado)
+      return textoCortado + "...";
+    }
+    console.log("entro2")
+
+    let text = null;
+    let textcortado = null;
+    let date = null;
+    let convertedDate = null;
+    console.log("entro3")
+
+    // text = document.getElementById("texto_articulo<%= results.article_id%>").innerHTML;
+    text = document.getElementById("texto_articulo<%= results.article_id%>").innerHTML;
+    console.log("entro4")
+    console.log(text)
+
+    let textocortado = countLetters(text);
+    console.log("aaaaaaaaaaaaaa")
+    console.log(textocortado)
+
+    document.getElementById("texto_articulo<%= results.article_id%>").innerHTML = textocortado;
+
+
+  </script>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

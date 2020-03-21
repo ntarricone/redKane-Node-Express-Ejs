@@ -1,0 +1,85 @@
+-- MySQL dump 10.13  Distrib 8.0.15, for Win64 (x86_64)
+--
+-- Host: localhost    Database: redkanecopia
+-- ------------------------------------------------------
+-- Server version	8.0.15
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+ SET NAMES utf8 ;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `article`
+--
+
+DROP TABLE IF EXISTS `article`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `article` (
+  `article_id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) DEFAULT NULL,
+  `text` varchar(10000) DEFAULT NULL,
+  `category` varchar(100) DEFAULT NULL,
+  `price` float DEFAULT NULL,
+  `date` date DEFAULT NULL,
+  `edit_date` date DEFAULT NULL,
+  PRIMARY KEY (`article_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=73 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `article`
+--
+
+LOCK TABLES `article` WRITE;
+/*!40000 ALTER TABLE `article` DISABLE KEYS */;
+INSERT INTO `article` VALUES (1,'Joker: The Movie','Joker is a 2019 American psychological thriller film directed and produced by Todd Phillips, who co-wrote the screenplay with Scott Silver. The film, based on DC Comics characters, stars Joaquin Phoenix as the Joker. Joker provides a possible origin story for the character; set in 1981, it follows Arthur Fleck, a failed stand-up comedian whose descent into insanity and nihilism inspires a violent countercultural revolution against the wealthy in a decaying Gotham City. Robert De Niro, Zazie Beetz, Frances Conroy, Brett Cullen, Glenn Fleshler, Bill Camp, Shea Whigham, and Marc Maron appear in supporting roles. Joker was produced by Warner Bros. Pictures, DC Films, and Joint Effort, in association with Bron Creative and Village Roadshow Pictures, and distributed by Warner Bros.\r\n\r\nPhillips conceived Joker in 2016 and wrote the script with Silver throughout 2017. The two were inspired by 1970s character studies and the films of Martin Scorsese (particularly Taxi Driver and The King of Comedy), who was initially attached to the project as a producer. The graphic novel Batman: The Killing Joke (1988) was the basis for the premise, but Phillips and Silver otherwise did not look to specific comics for inspiration. Phoenix became attached in February 2018 and was cast that July, while the majority of the cast signed on by August. Principal photography took place in New York City, Jersey City, and Newark, from September to December 2018. Joker is the first live-action theatrical Batman film to receive an R-rating from the Motion Picture Association of America, due to its violent and disturbing content.\r\n\r\nJoker premiered at the 76th Venice International Film Festival on August 31, 2019, where it won the Golden Lion, and was released in the United States on October 4, 2019. The film polarized critics; while Phoenix\'s performance was praised, the dark tone, portrayal of mental illness, and handling of violence divided responses.[7] Joker also generated concerns of inspiring real-world violence; the movie theater where the 2012 Aurora, Colorado mass shooting occurred during a screening of The Dark Knight Rises refused to show it. Despite this, the film became a major box office success, setting records for an October release. Joker has grossed over $1 billion, making it the first R-rated film to pass the billion-dollar mark at the worldwide box office, the seventh-highest-grossing film of 2019, and the 36th-highest-grossing film of all time.\r\n                      \r\n                     ','Entretenimiento',100,'2018-11-30','2019-11-24'),(54,'Maradona Lo Hizo','            (Buenos Aires, 1961) Futbolista argentino, uno de los más grandes de la historia, comparado a menudo con el legendario Pelé. Si bien su habilidad con el balón y su depurada técnica igualaron la del brasileño, la trayectoria de Maradona fue mucho más irregular: su carácter difícil, los problemas de salud y la adicción a las drogas malograron parte de su carrera, pero no impidió que su genialidad brillase en numerosas ocasiones. Tras ganar en 1979 el campeonato mundial juvenil con la selección de su país y triunfar dos años después en el Boca Juniors, inició un periplo europeo que lo llevó al F.C. Barcelona (1982-84), el Nápoles (1984-91) y el Sevilla (1992-93). De regreso a Argentina jugó en el Newell\'s Old Boys y en el Boca Juniors antes de retirarse en 1997. Con la selección argentina participó en cuatro mundiales y se alzó con el título mundial en el de México (1986), en el que tuvo una portentosa e inolvidable actuación.El futbolista más popular de Argentina nació, según consta en el Registro Civil, el día 30 de octubre de 1961 en Lanús, aunque todos lo identifiquen como el Pelusa de Villa Fiorito, donde transcurrió su infancia y desde donde saltó a la fama. A los nueve años inició su romance con el fútbol, cuando actuaba en un equipo infantil conocido como Los Cebollitas. Don Diego, su padre, regentaba una canchita en el barrio y dirigía el equipo Estrella Roja, al que Diego hijo accedió siendo adolescente y a despecho de sus compañeros de más edad. Estudió en el colegio comercial Avellaneda, pero no terminó el primer año del secundario, pues pasaba sus horas haciendo jueguitos (casi malabares) con la pelota.Fichado por Argentinos Juniors, debutó en la primera división en 1976, diez días antes de cumplir dieciséis años. Siguió jugando en Argentinos Juniors hasta 1980, y si bien su equipo no obtuvo ningún campeonato, Maradona fue el máximo goleador de los torneos argentinos de los años 1978, 1979 y 1980. En 1979 formó parte de la selección juvenil que ganó el campeonato del mundo. En 1981 pasó al Boca Juniors (el River Plate también intentó contratarlo), equipo con el que salió campeón ese mismo año.La aventura europeaYa por entonces los clubes del viejo continente eran el destino natural de las grandes promesas del fútbol americano, y Maradona era la más destacada. Contratado en 1982 por el Fútbol Club Barcelona por 1.200 millones de pesetas (7,2 millones de euros, una cifra astronómica en la época), consiguió con los azulgranas la Copa de la Liga, la Copa del Rey (ambas en 1983) y la Supercopa de España (1984), pero una hepatitis y una lesión importante perjudicaron su rendimiento. De nuevo por una cantidad astronómica pasó en 1984 al Nápoles, con el que ganó las ligas de 1987 y 1990, la copa UEFA de 1989 y la Supercopa de Italia de 1991.                                                                                                                                                                                                                                                                                             \r\n            ','Deportes',100,'2019-11-24','2019-11-26'),(61,'El Rey Leon llega a Málaga','Con larga ovación de pie y jolgorio ruidoso fue premiada la espectacular función del 9 de mayo del musical The Lion King, en el Ziff Ballet Opera House del Arsht Center. Estrenada en 1997 esta obra, inspirada en el dibujo animado de Disney de 1994 (que a su vez se inspira en el Hamlet de Shakespeare), se mantiene como la más popular del género, y la producción de Broadway que más ha recaudado hasta la fecha, más de mil millones de dólares. Ha ganado numerosos premios, incluso seis Tony, entre ellos el de mejor musical. En distintas producciones alrededor del mundo es la que más ha ganado, más de 8,000 millones de dólares.\r\n\r\nY es que lo tiene todo, un libreto sólido (Roger Allers e Irene Mecchi), pero ameno, música formidable (Elton John con canciones de Tim Rice) y personajes que logran inmediatamente la atención del público, tanto los positivos, como los taimados. La trama maneja temas eternos como la usurpación del poder, la injusticia, el abuso infantil, las consecuencias de la desobediencia a los mayores y muchos subtemas más, entre los que no puede faltar el romance de una pareja joven y el triunfo de la vida y la bondad, sobre la maldad y la destrucción. Hay también algo de los mitos más ancestrales de muchas religiones. El hecho de que los personajes sean animales le da un carácter de fábula, de apólogo, que subraya su intención educativa y le aporta un gran atractivo para los niños. Pero toda esta carga filosófica no afecta para nada el desarrollo de la trama que se desenvuelve ágilmente como una historia de aventuras en la que pasan muchas cosas, tristes y alegres, y los personajes crecen y aprenden. Todo envuelto en maravillosa música, canto, baile, trajes llenos de colorido, enormes marionetas, máscaras, luces y efectos que le dan a la obra su nivel de gran espectáculo.\r\n\r\nEn la función del jueves actuó como Rafiki, el mandril, la estupenda Mukelisiwe Goba, cuya gracia desbordante solo puede compararse con su poderosa voz, ideal para este papel que lleva –valga la redundancia- la voz cantante en el desarrollo de la trama. Richard A Phillips Jr. y Jared Dixon, que encarnan el rol titular, Simba, como niño y como joven, merecieron los largos aplausos con que el público los premió al final. También fue muy aplaudido Gerald Ramsey como el sabio rey Mufasa y Greg Jackson como el divertido Zazu, un bucerótido. También obtuvo especial distinción Spencer Plachy como el taimado Scar. Aplauso aparte para Nick Cordileone y Tony Freeman, que encarnan a Simon y Pumbaa, un suricata y un cerdo salvaje que se convierten en grandes amigos de Simba. Especial reconocimiento para Nia Holloway que encarnó a la joven Nala y para las tres divertidísimas hienas, a cargo de Martina Sykes, Keith Bennett y Robbie Swift.\r\n\r\nEs preciso mencionar que esta puesta, de la genial Julie Taymor, no sólo logra un trabajo extraordinario por parte de los actores y que la obra funcione con un ritmo incesante sin que por ello se produzca ninguna confusión ni sienta el público como que los acontecimientos se atropellan, sino que es una verdadera clase magistral de los recursos teatrales. Se usan elementos antiguos, de los orígenes del teatro, como las sombras chinescas, y los pájaros de seda volanderos en pértigas, también de la más remota China, junto a proyecciones ultramodernas o efectos de linterna mágica con dibujos en tinta. Todo contribuye a darle al espectáculo un sabor de eternidad. Sus mensajes y su belleza no tienen tiempo.','Entretenimiento',99,'2019-11-24','2019-11-24'),(63,'China sube sus tarifas','Llevamos unas semanas un tanto convulsas. El USD se hace cada vez mas fuerte. Como consecuencia de un dólar fuerte las materias primas se encarecen. En definitiva, todo se vuelve mas caro.\r\n\r\nEstamos en nuestro terremoto particular. Los importadores no sabemos cuando tendrá fin esta escalada de precios. Es como si alguien agitase el mercado y nos dejase a todos un poco fuera de lugar y estamos en situación de ver que ocurre después del terremoto.\r\n\r\nMis clientes, después de muchos años importando de China entienden que el precio del articulo sigue exactamente igual en la moneda local china (Yuan). Lo que varia son las circunstancias externas que no se pueden controlar, principalmente el tipo de cambio. Lo bueno es que son circunstancias iguales para todos los importadores por lo que si tu precio de compra sube también subirá para el resto de importadores. Si tienes buen precio con el proveedor llevas una gran ventaja con el resto de competidores. Aunque pienses que tus precios están subiendo, la realidad es que tus precios son mejores que los del resto.\r\n\r\nJuegan un papel muy importante en el mercado aquellos importadores que tengan grandes cantidades de stock y puedan mantener precios bajos durante mas tiempo que el resto. Nadie tiene una bola de cristal para adivinar el futuro ni poder predecir que el dólar continuará subiendo con respecto al euro. Pero todos aquellos que cerraron pedidos antes de las elecciones de EEUU, que es cuando empezó el rally alcista del dólar, tendrán sus precios un 5% mas económicos que el resto de competidores (mientras el dólar se mantenga en estos niveles).\r\n\r\nAfortunadamente existen algunas soluciones que nos ayudarán a paliar estos incrementos en la subida de precios.','Internacionales',120,'2019-11-24',NULL),(64,'La Historia de Bob Lazar','En noviembre de 1989, Lazar apareció en una entrevista especial con el periodista e investigador George Knapp en la cadena de televisión de Las Vegas KLAS-TV para hablar de diversos aspectos de las implicaciones de su trabajo en S-4 Sector 4.\r\n\r\nBob Lazar afirma que fue introducido inicialmente para trabajar en S-4 por Edward Teller. Sus tareas habrían consistido en investigaciones científicas del sistema de propulsión de uno de los nueve platillos volantes, como una parte general del proyecto de ingeniería inversa en curso que tiene lugar en S-4.\r\n\r\nDesde las primeras observaciones de Lazar en S-4, pensó que los platillos voladores eran aviones secretos terrestres, cuyos vuelos de prueba deben haber sido responsables de muchos informes de OVNIs. Gradualmente, y por los múltiples documentos que había leído detenidamente y que le habían mostrado en S-4, Lazar llegó a la conclusión de que los platillos eran de origen extraterrestre.\r\n\r\nEn cuanto a las teorías expuestas por Lazar sobre los estudios de física aplicada, que llevó a cabo en las instalaciones de S4, asegura que el elemento atómico 115 (conocido también como un elemento sintético con el nombre de Ununpentio y cuyo símbolo es Uup) serviría como combustible nuclear. El Elemento 115 según Lazar aportaría una fuente de energía el cual produciría unos efectos anti-gravitatorios bajo un constante bombardeo de protones, junto con la antimateria para conseguir una vasta producción de energía. A medida que el campo de interacción nuclear fuerte del núcleo del Elemento 115 está debidamente amplificado, el efecto gravitacional a gran escala resultante, vendría a ser una distorsión o deformación del espacio-tiempo que, de hecho, acorta considerablemente la distancia y el tiempo de desplazamiento hacía un determinado destino.\r\n\r\nSegún Lazar, participó en reuniones informativas en las que describen la participación histórica de seres extraterrestres con este planeta desde hace 10.000 años. Lazar afirma los seres extraterrestres (Grises) provienen del sistema binario de estrellas Zeta Reticuli.\r\n\r\nLa credibilidad de Lazar sufrió un duro revés cuando se descubrió que las escuelas y universidades a las que afirma haber asistido no tenían constancia alguna de él, y que nadie de la comunidad científica recuerda siquiera haberle conocido.2​ \r\n                      \r\n                      \r\n                      \r\n                      \r\n                     ','Otros',150,'2019-11-24','2019-11-24');
+/*!40000 ALTER TABLE `article` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `multimedia`
+--
+
+DROP TABLE IF EXISTS `multimedia`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `multimedia` (
+  `multimedia_id` int(11) NOT NULL AUTO_INCREMENT,
+  `type` varchar(10) DEFAULT NULL,
+  `file` varchar(300) DEFAULT NULL,
+  `description` varchar(400) DEFAULT NULL,
+  `article_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`multimedia_id`),
+  KEY `fk_article_1` (`article_id`),
+  CONSTRAINT `fk_article_1` FOREIGN KEY (`article_id`) REFERENCES `article` (`article_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=72 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `multimedia`
+--
+
+LOCK TABLES `multimedia` WRITE;
+/*!40000 ALTER TABLE `multimedia` DISABLE KEYS */;
+INSERT INTO `multimedia` VALUES (1,'Foto','332333_850139.jpg','Joker Movie',1),(53,'Foto','diegoBilardo.jpg','Maradona y Bilardo',54),(60,'Foto','lionKing.jpg','Rey Leon en el Teatro',61),(62,'Foto','ChinaYUsa.jpg','Xi Jing Ping y Trump se saludan',63),(63,'Foto','BobLazar.jpg','Carátula de Pelicula Bob Lazar',64);
+/*!40000 ALTER TABLE `multimedia` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2019-12-17  9:51:15

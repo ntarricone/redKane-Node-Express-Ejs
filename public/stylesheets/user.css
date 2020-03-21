@@ -1,0 +1,97 @@
+.bodyBackground{
+    background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+  .header{
+    height: 40vh !important;
+    width: 98.9vw !important;
+    background-image: url(../images/periodismo-1030x527.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    align-items: flex-end;
+    display: flex;
+}
+
+.bigAvatar{
+    width: 18vw;
+    border: 5px solid black;
+    border-radius: 52%;
+}
+
+.profileDescription{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.boton{
+    height: 5vh;
+    border-radius: 18%;
+    margin-top: 27%;
+    display: fixed !important;
+}
+
+.fixed{
+    position: fixed !important;
+    z-index: 100;
+}
+
+.dissapear{
+    z-index: 1;
+}
+
+.hide{
+    transition:  1s ease-in-out 0s;
+    /* display: none; */
+    margin-left: -210px;
+}
+
+.sidePanel{
+    width: 8vw;
+    padding-top: 6%;
+    opacity: 1;
+    margin:0px;
+    /* animation: fadeIn 2s ease; */
+    transition: margin 1s ease-in-out 0s;
+  }
+  
+  /* @keyframes fadeIn{
+    0%{
+      opacity: 0;
+      width: 0vw;
+    }
+
+    100%{
+      opacity: 1;
+      width: 8vw;
+    }
+  } */
+
+.sidePanelContent{
+   color: black !important;
+}
+
+.sidePanelContent:hover{
+    color:#ff3333 !important;
+    text-decoration: none;
+ }
+
+.dropdownMedia{
+    color: black !important;
+    height: 10;
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+
+.mainBody{
+    background-color: lightgrey!important;
+    padding-top: 33px !important;
+}
+
+
